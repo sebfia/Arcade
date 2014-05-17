@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD75B488-8D83-4078-8705-747213CD9398}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arcade</RootNamespace>
+    <AssemblyName>Arcade</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Engine\Architecture.cd" />
+    <None Include="Run\Execution\Events\Architecture.cd" />
+    <None Include="Run\Tasks\Architecture.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Build\FlowStack\CachedFlowStackBuilder.cs" />
+    <Compile Include="Build\RunVectors\ReadStateRunVectorBuilder.cs" />
+    <Compile Include="Build\RunVectors\WriteStateRunVectorBuilder.cs" />
+    <Compile Include="Dsl\Implementation\IReadStateFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IWriteStateFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\ReadStateFlowConfigurer.cs" />
+    <Compile Include="Dsl\TreatExceptionsWhenGathering.cs" />
+    <Compile Include="Dsl\Implementation\WriteStateFlowConfigurer.cs" />
+    <Compile Include="Engine\RuntimeEngineThreadFailedException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Run\Aspects\IAspect.cs" />
+    <Compile Include="Run\Aspects\IPostExecutionAdvice.cs" />
+    <Compile Include="Run\Aspects\IPreExecutionAdvice.cs" />
+    <Compile Include="Run\Aspects\ThrottlingPostExecutionAdvice.cs" />
+    <Compile Include="Run\Continuations\IOneTimeFlowResultContinuation.cs" />
+    <Compile Include="Run\Continuations\ITriggerContinuation.cs" />
+    <Compile Include="Run\Continuations\OneTimeFlowResultContinuation.cs" />
+    <Compile Include="Run\Continuations\ScheduledTriggerContinuation.cs" />
+    <Compile Include="Run\Continuations\TriggerContinuation.cs" />
+    <Compile Include="Run\Execution\Events\IRunFlowStackEvent.cs" />
+    <Compile Include="Run\Execution\IStateStore.cs" />
+    <Compile Include="Run\Execution\Messages\CancelledRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Messages\ScatterRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Post\CancelledRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Post\GatherRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Post\ScatterRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Messages\GatherRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Pre\GatherRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\Execution\Pre\ScatterRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\Execution\Events\FlowCancelledEvent.cs" />
+    <Compile Include="Run\Messages\FlowCancelledMessage.cs" />
+    <Compile Include="Run\Messages\FlowCompleteMessage.cs" />
+    <Compile Include="Run\Messages\FlowFailedMessage.cs" />
+    <Compile Include="Run\Execution\Events\InitializeChildFlowEvent.cs" />
+    <Compile Include="Run\Execution\Events\WaitOnPortEvent.cs" />
+    <Compile Include="Run\Messages\InitializeChildFlowMessage.cs" />
+    <Compile Include="Run\Messages\InitializeScatterMessage.cs" />
+    <Compile Include="Engine\RuntimeGatherException.cs" />
+    <Compile Include="Engine\ScatterFlowFailedException.cs" />
+    <Compile Include="Run\Messages\PortResultMessage.cs" />
+    <Compile Include="Run\Messages\TriggerMessage.cs" />
+    <Compile Include="Run\Messages\WaitOnPortMessage.cs" />
+    <Compile Include="Run\Observers\ChildFlowObserver.cs" />
+    <Compile Include="Run\Observers\ObservingStateStore.cs" />
+    <Compile Include="Run\Observers\PortContinuationObserver.cs" />
+    <Compile Include="Run\Observers\ScatterGatherObserver.cs" />
+    <Compile Include="Run\RunVectors\GatherRunVector.cs" />
+    <Compile Include="Build\RunVectors\GatherRunVectorBuilder.cs" />
+    <Compile Include="Build\RunVectors\GoToRunVectorBuilder.cs" />
+    <Compile Include="Build\RunVectors\ScatterRunVectorBuilder.cs" />
+    <Compile Include="Build\RunVectors\TriggerRunVectorBuilder.cs" />
+    <Compile Include="Build\RunVectors\WaitOnPortRunVectorBuilder.cs" />
+    <Compile Include="Dsl\Do.cs" />
+    <Compile Include="Dsl\ExtendsTimeSpan.cs" />
+    <Compile Include="Dsl\Implementation\GatherFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IGatherFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\ScatterFlowConfigurer.cs" />
+    <Compile Include="Dsl\IFlow.cs" />
+    <Compile Include="Dsl\Implementation\GoToFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IGoToFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IScatterFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\ITriggerFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IWaitOnPortFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\Gather.cs" />
+    <Compile Include="Dsl\Implementation\ScatterOperationFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\TriggerFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\WaitOnPortFlowConfigurer.cs" />
+    <Compile Include="Dsl\IOutflow.cs" />
+    <Compile Include="Dsl\IPassthrough.cs" />
+    <Compile Include="Dsl\ISink.cs" />
+    <Compile Include="Run\Execution\Messages\TriggerRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Post\TriggerRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Pre\TriggerRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\Execution\Events\GatherFlowResultEvent.cs" />
+    <Compile Include="Run\Execution\Events\InitializeScatterEvent.cs" />
+    <Compile Include="Run\RunVectors\ISelectableRunVector.cs" />
+    <Compile Include="Run\RunVectors\ReadStateRunVector.cs" />
+    <Compile Include="Run\RunVectors\ScatterRunVector.cs" />
+    <Compile Include="Run\RunVectors\WriteStateRunVector.cs" />
+    <Compile Include="Run\RunVectors\TriggerRunVector.cs" />
+    <Compile Include="Run\Execution\RunId.cs" />
+    <Compile Include="Run\Tasks\ContinueFromCancelledFlowTask.cs" />
+    <Compile Include="Run\Tasks\ContinueFromFailedFlowTask.cs" />
+    <Compile Include="Run\Tasks\Projections\IProjectionBuilder.cs" />
+    <Compile Include="Run\Tasks\Projections\ITaskVisitor.cs" />
+    <Compile Include="Run\Tasks\Projections\Projection.cs" />
+    <Compile Include="Run\Triggers\ITrigger.cs" />
+    <Compile Include="Engine\RuntimeEngineExecutionException.cs" />
+    <Compile Include="Run\Triggers\Trigger.cs" />
+    <Compile Include="Run\Messages\TaskExecutionExceptionMessage.cs" />
+    <Compile Include="Run\Ports\IPort.cs" />
+    <Compile Include="Run\Ports\Port.cs" />
+    <Compile Include="Run\Execution\Messages\WaitOnPortRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Post\WaitOnPortRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Pre\WaitOnPortRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\RunVectors\BoxingContinuation.cs" />
+    <Compile Include="Run\Execution\Result.cs" />
+    <Compile Include="Run\Execution\ExecutePackage.cs" />
+    <Compile Include="Run\Execution\Messages\ExecuteRunVectorMessage.cs" />
+    <Compile Include="Build\RunVectors\IRunVectorBuilder.cs" />
+    <Compile Include="Run\Execution\IFlowStackOrchestrator.cs" />
+    <Compile Include="Build\RunVectors\SimpleFindInputMethodStrategy.cs" />
+    <Compile Include="Build\RunVectors\SimpleFindOutputEventStrategy.cs" />
+    <Compile Include="Run\Execution\SimpleFlowStackOrchestrator.cs" />
+    <Compile Include="Build\FlowStack\SimpleFlowStackBuilder.cs" />
+    <Compile Include="Run\RunVectors\Conditional.cs" />
+    <Compile Include="Run\RunVectors\IRunVector.cs" />
+    <Compile Include="Run\RunVectors\FinalRunVector.cs" />
+    <Compile Include="Run\Execution\Messages\IRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Messages\RunVectorExecutedMessageBase.cs" />
+    <Compile Include="Run\Execution\Messages\ExceptionRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Messages\TimeoutRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Messages\SuccessfulRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Post\IRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Post\SuccessfulRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Post\ExceptionRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Post\TimeoutRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\IFlowStack.cs" />
+    <Compile Include="Run\Execution\Pre\IRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\RunVectors\WaitOnPortRunVector.cs" />
+    <Compile Include="Run\Tasks\ITask.cs" />
+    <Compile Include="Run\RunVectors\EbcRunVector.cs" />
+    <Compile Include="Build\RunVectors\EbcRunVectorBuilder.cs" />
+    <Compile Include="Run\Execution\Messages\FinalRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Post\FinalRunVectorExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Execution\Pre\FinalRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\RunVectors\ConditionalRunVector.cs" />
+    <Compile Include="Build\FlowStack\IFlowStackBuilder.cs" />
+    <Compile Include="Run\Execution\Pre\ExecutableRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\Execution\SimpleFlowStack.cs" />
+    <Compile Include="Run\Messages\StartFlowMessage.cs" />
+    <Compile Include="Run\Tasks\ICreateTaskFromMessageStrategy.cs" />
+    <Compile Include="Run\Tasks\RunFlowTask.cs" />
+    <Compile Include="Run\Messages\IRuntimeMessage.cs" />
+    <Compile Include="Run\Execution\IRunFlowStack.cs" />
+    <Compile Include="Run\Execution\Events\FlowFailedEvent.cs" />
+    <Compile Include="Run\Execution\Events\FlowFinishedEvent.cs" />
+    <Compile Include="Run\Continuations\ScheduledFlowResultContinuation.cs" />
+    <Compile Include="Run\Continuations\FlowResultContinuation.cs" />
+    <Compile Include="Run\Continuations\IFlowResultContinuation.cs" />
+    <Compile Include="Run\Observers\FlowFinishedObserver.cs" />
+    <Compile Include="Build\RunVectors\ConditionalRunVectorBuilder.cs" />
+    <Compile Include="Build\RunVectors\FinalRunVectorBuilder.cs" />
+    <Compile Include="Dsl\Implementation\FinalFlowConfigurer.cs" />
+    <Compile Include="Build\FlowStack\IStackBuilder.cs" />
+    <Compile Include="Build\RunVectors\JoinpointRunVectorBuilder.cs" />
+    <Compile Include="Build\FlowStack\IFlowStackBuilderFactory.cs" />
+    <Compile Include="Build\FlowStack\FlowStackBuilderFactory.cs" />
+    <Compile Include="Run\Tasks\CreateRunFlowTaskStrategy.cs" />
+    <Compile Include="Run\Messages\ContinueFlowMessage.cs" />
+    <Compile Include="Build\RunVectors\ContinueWithNamedFlowRunVectorBuilder.cs" />
+    <Compile Include="Run\RunVectors\ContinueWithNamedFlowRunVector.cs" />
+    <Compile Include="Run\Execution\Pre\ContinueWithNamedFlowRunVectorExecutionStrategy.cs" />
+    <Compile Include="Run\Execution\Messages\ContinueWithNamedFlowRunVectorExecutedMessage.cs" />
+    <Compile Include="Run\Execution\Post\ContinueWithNamedFlowExecutedMessageStrategy.cs" />
+    <Compile Include="Run\Observers\IRuntimeMessageObserver.cs" />
+    <Compile Include="Run\Tasks\ContinueFromSuccessfulFlowTask.cs" />
+    <Compile Include="Run\Tasks\CreateContinueFlowTaskStrategy.cs" />
+    <Compile Include="Dsl\Implementation\BaseFlowConfigurer.cs" />
+    <Compile Include="Dsl\Flow.cs" />
+    <Compile Include="Dsl\FlowConfiguration.cs" />
+    <Compile Include="Build\RunVectors\InstanceFactory.cs" />
+    <Compile Include="Engine\RuntimeConfiguration.cs" />
+    <Compile Include="Dsl\FlowFailureException.cs" />
+    <Compile Include="Dsl\FlowNotFoundException.cs" />
+    <Compile Include="Dsl\JoinpointNotFoundException.cs" />
+    <Compile Include="Dsl\DuplicateJoinpointException.cs" />
+    <Compile Include="Dsl\ExtendsFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\EbcFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IEbcFlowConfigurer.cs" />
+    <Compile Include="Dsl\IFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\ISelfCreatingFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\SelfCreatingEbcFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\BranchEnd.cs" />
+    <Compile Include="Dsl\Implementation\IJoinpointFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\JoinpointFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IConditionalFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\ConditionalFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\ContinueWithNamedFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\IContinueWithNamedFlowConfigurer.cs" />
+    <Compile Include="Dsl\IFlowContinuation.cs" />
+    <Compile Include="Dsl\CustomTimeoutAttribute.cs" />
+    <Compile Include="Engine\RuntimeEngine.cs" />
+    <Compile Include="Dsl\Implementation\IContinuationFlowConfigurer.cs" />
+    <Compile Include="Build\RunVectors\ContinuationRunVectorBuilder.cs" />
+    <Compile Include="Run\RunVectors\ContinuationRunVector.cs" />
+    <Compile Include="Dsl\Implementation\ContinuationFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\SelfCreatingContinuationFlowConfigurer.cs" />
+    <Compile Include="Build\RunVectors\FunctionRunVectorBuilder.cs" />
+    <Compile Include="Dsl\Implementation\IFunctionFlowConfigurer.cs" />
+    <Compile Include="Dsl\Implementation\FunctionFlowConfigurer.cs" />
+    <Compile Include="Run\RunVectors\IExecutableRunVector.cs" />
+    <Compile Include="Run\RunVectors\FunctionRunVector.cs" />
+    <Compile Include="Run\Continuations\PortContinuation.cs" />
+    <Compile Include="Run\Continuations\IPortContinuation.cs" />
+    <Compile Include="Run\Continuations\ScheduledPortContinuation.cs" />
+    <Compile Include="Run\Execution\Events\TriggerEvent.cs" />
+    <Compile Include="Run\Observers\TriggerContinuationObserver.cs" />
+    <Compile Include="Run\Execution\InputTypeNotMatchingOutputTypeException.cs" />
+    <Compile Include="Build\FlowStack\BuildFlowStackException.cs" />
+    <Compile Include="Run\Messages\BuildingFlowFailedMessage.cs" />
+    <Compile Include="Run\Messages\RunFlowMessage.cs" />
+    <Compile Include="Run\Tasks\CreateStartFlowTaskStrategy.cs" />
+    <Compile Include="Run\Aspects\ICanBeDeactivated.cs" />
+    <Compile Include="Run\Aspects\TraceExceptionPostExecutionAdvice.cs" />
+    <Compile Include="Run\Aspects\TracePreExecutionAdvice.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A9D8D98-90CA-42E1-9973-9D698D40B208}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arcade</RootNamespace>
+    <AssemblyName>Arcade</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Xamarin.Android\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\bin\Xamarin.Android\Debug\Arcade.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="..\Arcade\Build\FlowStack\CachedFlowStackBuilder.cs">
+      <Link>Build\FlowStack\CachedFlowStackBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\ReadStateRunVectorBuilder.cs">
+      <Link>Build\RunVectors\ReadStateRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\WriteStateRunVectorBuilder.cs">
+      <Link>Build\RunVectors\WriteStateRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IReadStateFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IReadStateFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IWriteStateFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IWriteStateFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ReadStateFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ReadStateFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\TreatExceptionsWhenGathering.cs">
+      <Link>Dsl\TreatExceptionsWhenGathering.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\WriteStateFlowConfigurer.cs">
+      <Link>Dsl\Implementation\WriteStateFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Engine\RuntimeEngineThreadFailedException.cs">
+      <Link>Engine\RuntimeEngineThreadFailedException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\IAspect.cs">
+      <Link>Run\Aspects\IAspect.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\IPostExecutionAdvice.cs">
+      <Link>Run\Aspects\IPostExecutionAdvice.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\IPreExecutionAdvice.cs">
+      <Link>Run\Aspects\IPreExecutionAdvice.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\ThrottlingPostExecutionAdvice.cs">
+      <Link>Run\Aspects\ThrottlingPostExecutionAdvice.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\IOneTimeFlowResultContinuation.cs">
+      <Link>Run\Continuations\IOneTimeFlowResultContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\ITriggerContinuation.cs">
+      <Link>Run\Continuations\ITriggerContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\OneTimeFlowResultContinuation.cs">
+      <Link>Run\Continuations\OneTimeFlowResultContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\ScheduledTriggerContinuation.cs">
+      <Link>Run\Continuations\ScheduledTriggerContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\TriggerContinuation.cs">
+      <Link>Run\Continuations\TriggerContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\IRunFlowStackEvent.cs">
+      <Link>Run\Execution\Events\IRunFlowStackEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\IStateStore.cs">
+      <Link>Run\Execution\IStateStore.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\CancelledRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\CancelledRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\ScatterRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\ScatterRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\CancelledRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\CancelledRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\GatherRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\GatherRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\ScatterRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\ScatterRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\GatherRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\GatherRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\GatherRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\GatherRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\ScatterRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\ScatterRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\FlowCancelledEvent.cs">
+      <Link>Run\Execution\Events\FlowCancelledEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\FlowCancelledMessage.cs">
+      <Link>Run\Messages\FlowCancelledMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\FlowCompleteMessage.cs">
+      <Link>Run\Messages\FlowCompleteMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\FlowFailedMessage.cs">
+      <Link>Run\Messages\FlowFailedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\InitializeChildFlowEvent.cs">
+      <Link>Run\Execution\Events\InitializeChildFlowEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\WaitOnPortEvent.cs">
+      <Link>Run\Execution\Events\WaitOnPortEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\InitializeChildFlowMessage.cs">
+      <Link>Run\Messages\InitializeChildFlowMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\InitializeScatterMessage.cs">
+      <Link>Run\Messages\InitializeScatterMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Engine\RuntimeGatherException.cs">
+      <Link>Engine\RuntimeGatherException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Engine\ScatterFlowFailedException.cs">
+      <Link>Engine\ScatterFlowFailedException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\PortResultMessage.cs">
+      <Link>Run\Messages\PortResultMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\TriggerMessage.cs">
+      <Link>Run\Messages\TriggerMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\WaitOnPortMessage.cs">
+      <Link>Run\Messages\WaitOnPortMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\ChildFlowObserver.cs">
+      <Link>Run\Observers\ChildFlowObserver.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\ObservingStateStore.cs">
+      <Link>Run\Observers\ObservingStateStore.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\PortContinuationObserver.cs">
+      <Link>Run\Observers\PortContinuationObserver.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\ScatterGatherObserver.cs">
+      <Link>Run\Observers\ScatterGatherObserver.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\GatherRunVector.cs">
+      <Link>Run\RunVectors\GatherRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\GatherRunVectorBuilder.cs">
+      <Link>Build\RunVectors\GatherRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\GoToRunVectorBuilder.cs">
+      <Link>Build\RunVectors\GoToRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\ScatterRunVectorBuilder.cs">
+      <Link>Build\RunVectors\ScatterRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\TriggerRunVectorBuilder.cs">
+      <Link>Build\RunVectors\TriggerRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\WaitOnPortRunVectorBuilder.cs">
+      <Link>Build\RunVectors\WaitOnPortRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Do.cs">
+      <Link>Dsl\Do.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\ExtendsTimeSpan.cs">
+      <Link>Dsl\ExtendsTimeSpan.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\GatherFlowConfigurer.cs">
+      <Link>Dsl\Implementation\GatherFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IGatherFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IGatherFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ScatterFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ScatterFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\IFlow.cs">
+      <Link>Dsl\IFlow.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\GoToFlowConfigurer.cs">
+      <Link>Dsl\Implementation\GoToFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IGoToFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IGoToFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IScatterFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IScatterFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ITriggerFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ITriggerFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IWaitOnPortFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IWaitOnPortFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\Gather.cs">
+      <Link>Dsl\Implementation\Gather.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ScatterOperationFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ScatterOperationFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\TriggerFlowConfigurer.cs">
+      <Link>Dsl\Implementation\TriggerFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\WaitOnPortFlowConfigurer.cs">
+      <Link>Dsl\Implementation\WaitOnPortFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\IOutflow.cs">
+      <Link>Dsl\IOutflow.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\IPassthrough.cs">
+      <Link>Dsl\IPassthrough.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\ISink.cs">
+      <Link>Dsl\ISink.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\TriggerRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\TriggerRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\TriggerRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\TriggerRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\TriggerRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\TriggerRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\GatherFlowResultEvent.cs">
+      <Link>Run\Execution\Events\GatherFlowResultEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\InitializeScatterEvent.cs">
+      <Link>Run\Execution\Events\InitializeScatterEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\ISelectableRunVector.cs">
+      <Link>Run\RunVectors\ISelectableRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\ReadStateRunVector.cs">
+      <Link>Run\RunVectors\ReadStateRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\ScatterRunVector.cs">
+      <Link>Run\RunVectors\ScatterRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\WriteStateRunVector.cs">
+      <Link>Run\RunVectors\WriteStateRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\TriggerRunVector.cs">
+      <Link>Run\RunVectors\TriggerRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\RunId.cs">
+      <Link>Run\Execution\RunId.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\ContinueFromCancelledFlowTask.cs">
+      <Link>Run\Tasks\ContinueFromCancelledFlowTask.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\ContinueFromFailedFlowTask.cs">
+      <Link>Run\Tasks\ContinueFromFailedFlowTask.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\Projections\IProjectionBuilder.cs">
+      <Link>Run\Tasks\Projections\IProjectionBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\Projections\ITaskVisitor.cs">
+      <Link>Run\Tasks\Projections\ITaskVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\Projections\Projection.cs">
+      <Link>Run\Tasks\Projections\Projection.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Triggers\ITrigger.cs">
+      <Link>Run\Triggers\ITrigger.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Engine\RuntimeEngineExecutionException.cs">
+      <Link>Engine\RuntimeEngineExecutionException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Triggers\Trigger.cs">
+      <Link>Run\Triggers\Trigger.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\TaskExecutionExceptionMessage.cs">
+      <Link>Run\Messages\TaskExecutionExceptionMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Ports\IPort.cs">
+      <Link>Run\Ports\IPort.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Ports\Port.cs">
+      <Link>Run\Ports\Port.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\WaitOnPortRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\WaitOnPortRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\WaitOnPortRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\WaitOnPortRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\WaitOnPortRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\WaitOnPortRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\BoxingContinuation.cs">
+      <Link>Run\RunVectors\BoxingContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Result.cs">
+      <Link>Run\Execution\Result.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\ExecutePackage.cs">
+      <Link>Run\Execution\ExecutePackage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\ExecuteRunVectorMessage.cs">
+      <Link>Run\Execution\Messages\ExecuteRunVectorMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\IRunVectorBuilder.cs">
+      <Link>Build\RunVectors\IRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\IFlowStackOrchestrator.cs">
+      <Link>Run\Execution\IFlowStackOrchestrator.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\SimpleFindInputMethodStrategy.cs">
+      <Link>Build\RunVectors\SimpleFindInputMethodStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\SimpleFindOutputEventStrategy.cs">
+      <Link>Build\RunVectors\SimpleFindOutputEventStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\SimpleFlowStackOrchestrator.cs">
+      <Link>Run\Execution\SimpleFlowStackOrchestrator.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\FlowStack\SimpleFlowStackBuilder.cs">
+      <Link>Build\FlowStack\SimpleFlowStackBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\Conditional.cs">
+      <Link>Run\RunVectors\Conditional.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\IRunVector.cs">
+      <Link>Run\RunVectors\IRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\FinalRunVector.cs">
+      <Link>Run\RunVectors\FinalRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\IRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\IRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\RunVectorExecutedMessageBase.cs">
+      <Link>Run\Execution\Messages\RunVectorExecutedMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\ExceptionRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\ExceptionRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\TimeoutRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\TimeoutRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\SuccessfulRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\SuccessfulRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\IRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\IRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\SuccessfulRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\SuccessfulRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\ExceptionRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\ExceptionRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\TimeoutRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\TimeoutRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\IFlowStack.cs">
+      <Link>Run\Execution\IFlowStack.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\IRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\IRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\WaitOnPortRunVector.cs">
+      <Link>Run\RunVectors\WaitOnPortRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\ITask.cs">
+      <Link>Run\Tasks\ITask.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\EbcRunVector.cs">
+      <Link>Run\RunVectors\EbcRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\EbcRunVectorBuilder.cs">
+      <Link>Build\RunVectors\EbcRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\FinalRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\FinalRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\FinalRunVectorExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\FinalRunVectorExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\FinalRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\FinalRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\ConditionalRunVector.cs">
+      <Link>Run\RunVectors\ConditionalRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\FlowStack\IFlowStackBuilder.cs">
+      <Link>Build\FlowStack\IFlowStackBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\ExecutableRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\ExecutableRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\SimpleFlowStack.cs">
+      <Link>Run\Execution\SimpleFlowStack.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\StartFlowMessage.cs">
+      <Link>Run\Messages\StartFlowMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\ICreateTaskFromMessageStrategy.cs">
+      <Link>Run\Tasks\ICreateTaskFromMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\RunFlowTask.cs">
+      <Link>Run\Tasks\RunFlowTask.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\IRuntimeMessage.cs">
+      <Link>Run\Messages\IRuntimeMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\IRunFlowStack.cs">
+      <Link>Run\Execution\IRunFlowStack.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\FlowFailedEvent.cs">
+      <Link>Run\Execution\Events\FlowFailedEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\FlowFinishedEvent.cs">
+      <Link>Run\Execution\Events\FlowFinishedEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\ScheduledFlowResultContinuation.cs">
+      <Link>Run\Continuations\ScheduledFlowResultContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\FlowResultContinuation.cs">
+      <Link>Run\Continuations\FlowResultContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\IFlowResultContinuation.cs">
+      <Link>Run\Continuations\IFlowResultContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\FlowFinishedObserver.cs">
+      <Link>Run\Observers\FlowFinishedObserver.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\ConditionalRunVectorBuilder.cs">
+      <Link>Build\RunVectors\ConditionalRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\FinalRunVectorBuilder.cs">
+      <Link>Build\RunVectors\FinalRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\FinalFlowConfigurer.cs">
+      <Link>Dsl\Implementation\FinalFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\FlowStack\IStackBuilder.cs">
+      <Link>Build\FlowStack\IStackBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\JoinpointRunVectorBuilder.cs">
+      <Link>Build\RunVectors\JoinpointRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\FlowStack\IFlowStackBuilderFactory.cs">
+      <Link>Build\FlowStack\IFlowStackBuilderFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\FlowStack\FlowStackBuilderFactory.cs">
+      <Link>Build\FlowStack\FlowStackBuilderFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\CreateRunFlowTaskStrategy.cs">
+      <Link>Run\Tasks\CreateRunFlowTaskStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\ContinueFlowMessage.cs">
+      <Link>Run\Messages\ContinueFlowMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\ContinueWithNamedFlowRunVectorBuilder.cs">
+      <Link>Build\RunVectors\ContinueWithNamedFlowRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\ContinueWithNamedFlowRunVector.cs">
+      <Link>Run\RunVectors\ContinueWithNamedFlowRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Pre\ContinueWithNamedFlowRunVectorExecutionStrategy.cs">
+      <Link>Run\Execution\Pre\ContinueWithNamedFlowRunVectorExecutionStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Messages\ContinueWithNamedFlowRunVectorExecutedMessage.cs">
+      <Link>Run\Execution\Messages\ContinueWithNamedFlowRunVectorExecutedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Post\ContinueWithNamedFlowExecutedMessageStrategy.cs">
+      <Link>Run\Execution\Post\ContinueWithNamedFlowExecutedMessageStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\IRuntimeMessageObserver.cs">
+      <Link>Run\Observers\IRuntimeMessageObserver.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\ContinueFromSuccessfulFlowTask.cs">
+      <Link>Run\Tasks\ContinueFromSuccessfulFlowTask.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\CreateContinueFlowTaskStrategy.cs">
+      <Link>Run\Tasks\CreateContinueFlowTaskStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\BaseFlowConfigurer.cs">
+      <Link>Dsl\Implementation\BaseFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Flow.cs">
+      <Link>Dsl\Flow.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\FlowConfiguration.cs">
+      <Link>Dsl\FlowConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\InstanceFactory.cs">
+      <Link>Build\RunVectors\InstanceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Engine\RuntimeConfiguration.cs">
+      <Link>Engine\RuntimeConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\FlowFailureException.cs">
+      <Link>Dsl\FlowFailureException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\FlowNotFoundException.cs">
+      <Link>Dsl\FlowNotFoundException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\JoinpointNotFoundException.cs">
+      <Link>Dsl\JoinpointNotFoundException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\DuplicateJoinpointException.cs">
+      <Link>Dsl\DuplicateJoinpointException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\ExtendsFlowConfigurer.cs">
+      <Link>Dsl\ExtendsFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\EbcFlowConfigurer.cs">
+      <Link>Dsl\Implementation\EbcFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IEbcFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IEbcFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\IFlowConfigurer.cs">
+      <Link>Dsl\IFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ISelfCreatingFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ISelfCreatingFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\SelfCreatingEbcFlowConfigurer.cs">
+      <Link>Dsl\Implementation\SelfCreatingEbcFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\BranchEnd.cs">
+      <Link>Dsl\Implementation\BranchEnd.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IJoinpointFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IJoinpointFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\JoinpointFlowConfigurer.cs">
+      <Link>Dsl\Implementation\JoinpointFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IConditionalFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IConditionalFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ConditionalFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ConditionalFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ContinueWithNamedFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ContinueWithNamedFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IContinueWithNamedFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IContinueWithNamedFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\IFlowContinuation.cs">
+      <Link>Dsl\IFlowContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\CustomTimeoutAttribute.cs">
+      <Link>Dsl\CustomTimeoutAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Engine\RuntimeEngine.cs">
+      <Link>Engine\RuntimeEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IContinuationFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IContinuationFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\ContinuationRunVectorBuilder.cs">
+      <Link>Build\RunVectors\ContinuationRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\ContinuationRunVector.cs">
+      <Link>Run\RunVectors\ContinuationRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\ContinuationFlowConfigurer.cs">
+      <Link>Dsl\Implementation\ContinuationFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\SelfCreatingContinuationFlowConfigurer.cs">
+      <Link>Dsl\Implementation\SelfCreatingContinuationFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\RunVectors\FunctionRunVectorBuilder.cs">
+      <Link>Build\RunVectors\FunctionRunVectorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\IFunctionFlowConfigurer.cs">
+      <Link>Dsl\Implementation\IFunctionFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Dsl\Implementation\FunctionFlowConfigurer.cs">
+      <Link>Dsl\Implementation\FunctionFlowConfigurer.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\IExecutableRunVector.cs">
+      <Link>Run\RunVectors\IExecutableRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\RunVectors\FunctionRunVector.cs">
+      <Link>Run\RunVectors\FunctionRunVector.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\PortContinuation.cs">
+      <Link>Run\Continuations\PortContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\IPortContinuation.cs">
+      <Link>Run\Continuations\IPortContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Continuations\ScheduledPortContinuation.cs">
+      <Link>Run\Continuations\ScheduledPortContinuation.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\Events\TriggerEvent.cs">
+      <Link>Run\Execution\Events\TriggerEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Observers\TriggerContinuationObserver.cs">
+      <Link>Run\Observers\TriggerContinuationObserver.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Execution\InputTypeNotMatchingOutputTypeException.cs">
+      <Link>Run\Execution\InputTypeNotMatchingOutputTypeException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Build\FlowStack\BuildFlowStackException.cs">
+      <Link>Build\FlowStack\BuildFlowStackException.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\BuildingFlowFailedMessage.cs">
+      <Link>Run\Messages\BuildingFlowFailedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Messages\RunFlowMessage.cs">
+      <Link>Run\Messages\RunFlowMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Tasks\CreateStartFlowTaskStrategy.cs">
+      <Link>Run\Tasks\CreateStartFlowTaskStrategy.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\ICanBeDeactivated.cs">
+      <Link>Run\Aspects\ICanBeDeactivated.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\TraceExceptionPostExecutionAdvice.cs">
+      <Link>Run\Aspects\TraceExceptionPostExecutionAdvice.cs</Link>
+    </Compile>
+    <Compile Include="..\Arcade\Run\Aspects\TracePreExecutionAdvice.cs">
+      <Link>Run\Aspects\TracePreExecutionAdvice.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

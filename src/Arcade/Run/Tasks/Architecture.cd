@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Arcade.Run.Tasks.ContinueFlowTask" Collapsed="true">
+    <Position X="4.5" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAIAAAAEAADAQAAAAAAEAAABAAAAAAEAAAI=</HashCode>
+      <FileName>Run\Tasks\ContinueFlowTask.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Tasks.RunFlowTask" Collapsed="true">
+    <Position X="1.5" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAIAAAAgAADAAAAAAAAEAAABAAAAAAEAAAI=</HashCode>
+      <FileName>Run\Tasks\RunFlowTask.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Tasks.RunScatterFlowTask" Collapsed="true">
+    <Position X="7.25" Y="3" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAIAAAAAAADAAAAAAAAEAAABAAAAAAUAAAI=</HashCode>
+      <FileName>Run\Tasks\RunScatterFlowTask.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Observers.FlowCompletionObserver" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIIgAABAAAAAAAAQAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Run\Observers\FlowCompletionObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Observers.ChildFlowObserver" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAhAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Run\Observers\ChildFlowObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Observers.ObservingStateStore" Collapsed="true">
+    <Position X="9.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQAAAUAgAAAAAAAAAAAGAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Run\Observers\ObservingStateStore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Observers.PortContinuationObserver" Collapsed="true">
+    <Position X="5.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAgCAAAAAAAgAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Run\Observers\PortContinuationObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Observers.ScatterGatherObserver" Collapsed="true">
+    <Position X="5" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAgAAAAAAAEAIAAAgAAQAAAAA=</HashCode>
+      <FileName>Run\Observers\ScatterGatherObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Arcade.Run.Observers.TriggerContinuationObserver" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAABAAAAAAAAAACAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Run\Observers\TriggerContinuationObserver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Arcade.Run.Tasks.ITask">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Run\Tasks\ITask.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Arcade.Run.Observers.IRuntimeMessageObserver&lt;TRuntimeMessage&gt;">
+    <Position X="4" Y="4" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Run\Observers\IRuntimeMessageObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
